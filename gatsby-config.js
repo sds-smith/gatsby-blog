@@ -9,10 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Counterpoint Brewing & Blending`,
+    description: `A sample blog to explore the basics of Gatsby.js using content from my personal hobby beer brewing blog.`,
+    author: `sds-smith`,
+    siteUrl: `https://sds-smith.dev`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -31,6 +31,7 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
