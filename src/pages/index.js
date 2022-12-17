@@ -19,7 +19,7 @@ const IndexPage = ({data}) => {
   return (
     <Layout>
       <div>
-        <h1>Counterpoint Thoughts</h1>
+        <h1>Counterpoint Musings</h1>
         <h4>{data.allMarkdownRemark.totalCount}</h4>
         {
           data.allMarkdownRemark.edges.map(({node}) => (
@@ -54,7 +54,6 @@ export const query = graphql`
           id
           frontmatter {
             date
-            description
             title
           }
           fields {
