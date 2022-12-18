@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 
 const BlogPost = ({data}) => {
@@ -14,6 +15,8 @@ const BlogPost = ({data}) => {
         </Layout>
     )
 }
+
+export const Head = ({data}) => <Seo title={data.markdownRemark.frontmatter.title} />
 
 export default BlogPost
 

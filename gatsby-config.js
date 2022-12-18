@@ -15,6 +15,7 @@ module.exports = {
     siteUrl: `https://sds-smith.dev`,
   },
   plugins: [
+    `gatsby-plugin-image`,  
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -22,11 +23,20 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
-    },    {
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdowns`,
         path: `${__dirname}/src/markdown-pages`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "counterpoint-brewing-blending",
+        protocol: "https",
+        hostname: "http://counterpoint-brewing-blending.s3-website-us-east-1.amazonaws.com"
       },
     },
     `gatsby-transformer-remark`,
@@ -44,7 +54,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/counterpoint-black-on-transparent.png`, // This path is relative to the root of the site.
       },
     },
   ],
